@@ -1,0 +1,79 @@
+
+<html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Mars Facts</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" href="style.css">
+    </head>
+    
+    <body>
+      <div class="container-fluid">
+        <div class="jumbotron text-center">
+          <h1>Mars Facts</h1>
+          <p><a class="btn btn-primary btn-lg" href="/mars_scrape" role="button">Click here to get the Latest Mars Facts.</a></p>
+        </div>
+
+        <div>
+          <h1>Mars News</h1>
+          <h2>{{mars_data.mars_headline}}</h2>
+          <h3>{{mars_data.mars_text}}</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h1>Latest Mars Image</h1>
+            <a><img src="{{mars_data.feature_image}}" width="400" height="300"></a>
+          </div>
+          <div class="col-md-4">
+            <div>
+              <h2>Current Weather on Mars</h1>
+              <p>{{mars_data.latest_weather}}</p>
+            </div>
+            <div>
+              <h3>
+                Mars Facts
+              </h3>
+              {{mars_data.mars_facts | safe}}
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div style="background-color:lightcoral; margin-top:3px; border-radius:8px">
+            <h1 style="text-align:center">Mars Hemispheres</h1>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <img class="image-fluid" src="{{mars_data.cerberus_hemi}}" style="width:100%">
+              <p>Cerberus Hemisphere Enhanced</p>
+            </div>
+            <div class="col-md-6">
+                <img class="image-fluid" src="{{mars_data.schiaparelli_hemi}}" style="width:100%">
+              <p>Schiaparelli Hemisphere Enhanced</p>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-6">
+                  <img class="image-fluid" src="{{mars_data.syrtis_hemi}}" style="width:100%">
+                <p>Syrtis Hemisphere Enhanced</p>
+              </div>
+              <div class="col-md-6">
+                  <img class="image-fluid" src="{{mars_data.valles_hemi}}" style="width:100%">
+                <p>Valles Hemisphere Enhanced</p>
+              </div>
+            </div>
+      
+
+      </div>
+    </body>
+    
+    </html>
+    
